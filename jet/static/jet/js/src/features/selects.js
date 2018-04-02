@@ -189,9 +189,11 @@ Select2.prototype = {
             };
         }
 
+        /* XXX breaks select2 in custom templates with "django.jQuery is not a function"
         $select.on('change', function(e) {
             django.jQuery($select.get(0)).trigger(e);
         });
+        */
 
         $select.select2(settings);
     },
